@@ -17,20 +17,30 @@
     </div>
     <div class="menu-icons">
       <button class="menu-btn">&#9776;</button>
-      <div class="cart-icon">
+      <div class="cart-icon" id="cartBtn">
         🛒<span class="cart-count">1</span>
       </div>
     </div>
   </header>
 
+  <!-- Mobile Menu -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Kategori</a></li>
+      <li><a href="#">Produk</a></li>
+      <li><a href="#">Tentang</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero -->
   <section class="hero">
     <h2><span>Premium Digital Products</span> Marketplace</h2>
-    <p>Discover the best digital products, game items, and services from trusted sellers worldwide. Fast delivery and secure transactions guaranteed.</p>
+    <p>Discover the best digital products, game items, and services from trusted sellers worldwide.</p>
 
     <div class="search-box">
-      <input type="text" placeholder="Search for products...">
-      <button>🔍 Search</button>
+      <input type="text" placeholder="Search for products..." id="searchInput">
+      <button id="searchBtn">🔍 Search</button>
     </div>
   </section>
 
@@ -48,6 +58,15 @@
       </div>
     </div>
   </section>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h4>Keranjang</h4>
+      <button id="closeCart">✖</button>
+    </div>
+    <p style="padding: 1rem;">Keranjang kamu masih kosong.</p>
+  </div>
 
   <script src="script.js"></script>
 </body>
