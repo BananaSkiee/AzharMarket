@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AzharMarket - Marketplace Digital Premium</title>
-  <link rel="icon" href="assets/logo.png" />
+  <title>AzharMarket</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
 </head>
 <body>
 
@@ -15,26 +15,39 @@
       <img src="assets/logo.png" alt="Logo">
       <h1>AzharMarket</h1>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Kategori</a></li>
-        <li><a href="#">Produk</a></li>
-        <li><a href="#">Tentang</a></li>
-      </ul>
-    </nav>
+    <div class="menu-icons">
+      <button class="menu-btn">&#9776;</button>
+      <div class="cart-icon">
+        🛒<span class="cart-count">1</span>
+      </div>
+    </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <h2>Selamat Datang di AzharMarket</h2>
-    <p>Marketplace digital premium untuk kebutuhan virtual kamu — cepat, aman, dan terpercaya.</p>
+    <h2><span>Premium Digital Products</span> Marketplace</h2>
+    <p>Discover the best digital products, game items, and services from trusted sellers worldwide. Fast delivery and secure transactions guaranteed.</p>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search for products...">
+      <button>🔍 Search</button>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 AzharMarket. Semua hak dilindungi.</p>
-  </footer>
+  <!-- Categories -->
+  <section class="categories">
+    <h3>Popular Categories</h3>
+    <div class="category-list">
+      <div class="category-card">
+        <div class="icon">🎮</div>
+        <p>Game Items</p>
+      </div>
+      <div class="category-card">
+        <div class="icon">💎</div>
+        <p>In-Game Currency</p>
+      </div>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
