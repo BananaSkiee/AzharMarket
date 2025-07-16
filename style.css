@@ -1,73 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AzharMarket</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/logo.png" />
-</head>
-<body>
+/* Cart Sidebar */
+.cart-sidebar {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: var(--secondary);
+  color: var(--text);
+  transition: right 0.3s ease;
+  box-shadow: -4px 0 8px rgba(0,0,0,0.3);
+  z-index: 999;
+}
 
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="assets/logo.png" alt="Logo">
-      <h1>AzharMarket</h1>
-    </div>
-    <div class="menu-icons">
-      <button class="menu-btn">&#9776;</button>
-      <div class="cart-icon" id="cartBtn">
-        🛒<span class="cart-count">1</span>
-      </div>
-    </div>
-  </header>
+.cart-sidebar.active {
+  right: 0;
+}
 
-  <!-- Mobile Menu -->
-  <nav class="mobile-nav" id="mobileNav">
-    <ul>
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Kategori</a></li>
-      <li><a href="#">Produk</a></li>
-      <li><a href="#">Tentang</a></li>
-    </ul>
-  </nav>
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--accent);
+}
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2><span>Premium Digital Products</span> Marketplace</h2>
-    <p>Discover the best digital products, game items, and services from trusted sellers worldwide.</p>
+.cart-header h4 {
+  font-size: 1.2rem;
+}
 
-    <div class="search-box">
-      <input type="text" placeholder="Search for products..." id="searchInput">
-      <button id="searchBtn">🔍 Search</button>
-    </div>
-  </section>
+.cart-header button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text);
+  cursor: pointer;
+}
 
-  <!-- Categories -->
-  <section class="categories">
-    <h3>Popular Categories</h3>
-    <div class="category-list">
-      <div class="category-card">
-        <div class="icon">🎮</div>
-        <p>Game Items</p>
-      </div>
-      <div class="category-card">
-        <div class="icon">💎</div>
-        <p>In-Game Currency</p>
-      </div>
-    </div>
-  </section>
+/* Mobile Nav */
+.mobile-nav {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: var(--secondary);
+  display: none;
+  z-index: 998;
+}
 
-  <!-- Cart Sidebar -->
-  <div class="cart-sidebar" id="cartSidebar">
-    <div class="cart-header">
-      <h4>Keranjang</h4>
-      <button id="closeCart">✖</button>
-    </div>
-    <p style="padding: 1rem;">Keranjang kamu masih kosong.</p>
-  </div>
+.mobile-nav ul {
+  list-style: none;
+  padding: 1rem;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.mobile-nav li {
+  margin-bottom: 1rem;
+}
+
+.mobile-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.mobile-nav.show {
+  display: block;
+}
